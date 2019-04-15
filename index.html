@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="menu-style.css">
     <script src="http://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="script.js"></script>
+    <script>
+
+      $(document).ready(function() {
+
+        $('.touch').click(function(){
+
+          var class_by_id = $('#touch-button').attr('class');
+
+          if (class_by_id == 'touch on') {
+            document.getElementById("touch-button").className="touch off";
+          }
+          else {
+            document.getElementById("touch-button").className="touch on"
+          }
+        });
+
+      });
+      $(this).toggleClass('on');
+      
+    </script>
 
   </head>
 
