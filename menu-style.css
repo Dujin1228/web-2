@@ -1,5 +1,5 @@
-body { background: white; width: 100vw; height: 100vh; margin: 0; }
-.touch { display: block; position: absolute; width: 30px; height: 30px; left: 50%; top: 50%; transform: translate(-50%, -50%); text-decoration: none; }
+body { background: white; width: 100vw; height: 90vh; margin: 0; }
+.touch { display: block; position: absolute; width: 50px; height: 50px; left: 50%; top: 50%; transform: translate(-50%, -50%); text-decoration: none; }
 .touch span { display: block; position: absolute; top: 50%; transform: translate(0, -50%); width: 100%; height: 15%; background: rgba(51, 255, 51, 1); color: transparent; }
 .touch span:before, .touch span:after {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(51, 255, 51, 1); }
 .touch span:before { top: -220%; }
