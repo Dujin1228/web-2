@@ -1,0 +1,18 @@
+body { background: white; width: 100vw; height: 100vh; margin: 0; }
+.touch { display: block; position: absolute; width: 30px; height: 30px; left: 50%; top: 50%; transform: translate(-50%, -50%); text-decoration: none; }
+.touch span { display: block; position: absolute; top: 50%; transform: translate(0, -50%); width: 100%; height: 15%; background: rgba(51, 255, 51, 1); color: transparent; }
+.touch span:before, .touch span:after {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(51, 255, 51, 1); }
+.touch span:before { top: -220%; }
+.touch span:after { top: 220%; }
+.touch.on span { animation-name: touch-on; animation-duration: 0.5s; animation-fill-mode: forwards; }
+.touch.on span:before { animation-name: touch-on-before; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out; }
+.touch.on span:after { animation: touch-on-after; animation-duration: 0.5s; animation-fill-mode: forwards; }
+.touch.off span { background: rgba(255, 198, 0, 0); animation-name: touch-off; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-in; }
+.touch.off span:before { top: 0; transform: rotate(45deg); animation-name: touch-off-before; animation-duration: 0.5s; animation-fill-mode: forwards; }
+.touch.off span:after { top: 0; transform: rotate(-45deg); animation-name: touch-off-after; animation-duration: 0.5s; animation-fill-mode: forwards; }
+@keyframes touch-on { to { background: rgba(255, 198, 0, 0); } }
+@keyframes touch-on-after { to { top: 0; transform: rotate(-45deg); } }
+@keyframes touch-on-before { to { top: 0; transform: rotate(45deg); } }
+@keyframes touch-off { to { background: rgba(51, 255, 51, 1); } }
+@keyframes touch-off-after { to { top: 220%; transform: rotate(0); } }
+@keyframes touch-off-before { to { top: -220%; transform: rotate(0); } }
