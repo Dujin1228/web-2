@@ -1,46 +1,60 @@
 body { background: white; width: 100vw; height: 100vh; margin: 0; font-family: sans-serif; overflow: hidden; }
 .touch { display: inline-block; position: absolute; width: 40px; height: 40px; right: 5px; top: 40px; transform: translate(-50%, -50%); text-decoration: none; }
-@media (max-width: 500px) { .touch { width: 30px; height: 30px; right: 2px; top: 33px; } }
-.touch span { display: inline-block; position: absolute; top: 50%; transform: translate(0, -50%); width: 40px; height: 2px; background: rgba(88, 255, 128, 1); color: transparent; }
-.touch span:before, .touch span:after {content: ""; position: absolute; left: 0; top: 0; width: 40px; height: 2px; background: rgba(88, 255, 128, 1); }
+.touch span { display: inline-block; position: absolute; top: 50%; transform: translate(0, -50%); width: 40px; height: 2px; background: rgba(255, 105, 110, 1); color: transparent; }
+.touch span:before, .touch span:after {content: ""; position: absolute; left: 0; top: 0; width: 40px; height: 2px; background: rgba(255, 105, 110, 1); }
 .touch span:before { top: -12px; }
 .touch span:after { top: 12px; }
 .touch.on span { animation-name: touch-on; animation-duration: 0.5s; animation-fill-mode: forwards; }
 .touch.on span:before { animation-name: touch-on-before; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out; }
 .touch.on span:after { animation: touch-on-after; animation-duration: 0.5s; animation-fill-mode: forwards; }
-.touch.off span { background: rgba(88, 255, 128, 0); animation-name: touch-off; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-in; }
+.touch.off span { background: rgba(255, 105, 110, 0); animation-name: touch-off; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-in; }
 .touch.off span:before { top: 0; transform: rotate(45deg); animation-name: touch-off-before; animation-duration: 0.5s; animation-fill-mode: forwards; }
 .touch.off span:after { top: 0; transform: rotate(-45deg); animation-name: touch-off-after; animation-duration: 0.5s; animation-fill-mode: forwards; }
-@keyframes touch-on { to { background: rgba(255, 198, 0, 0); } }
+@keyframes touch-on { to { background: rgba(255, 105, 110, 0); } }
 @keyframes touch-on-after { to { top: 0; transform: rotate(-45deg); background: rgba(128, 128, 128, 1); } }
 @keyframes touch-on-before { to { top: 0; transform: rotate(45deg); background: rgba(128, 128, 128, 1); } }
-@keyframes touch-off { to { background: rgba(88, 255, 128, 1); } }
+@keyframes touch-off { to { background: rgba(255, 105, 110, 1); } }
 @keyframes touch-off-after { to { top: 12px; transform: rotate(0); } }
 @keyframes touch-off-before { to { top: -12px; transform: rotate(0); } }
 .opacity.menu-on h1, .opacity.menu-on .search { opacity: 0.35; }
-.menu { display: inline-block; background: white; position: absolute; right: -702px; top: 0; width: 700px; height: 100vh; transition: all .5s; border-left: 2px solid gray; }
+.menu { display: inline-block; background: white; position: absolute; right: -502px; top: 0; width: 500px; height: 100vh; transition: all .35s; border-left: 2px solid gray; }
 .menu.on { right: 0; }
-.search img { max-width: 40px; color: white; transform: translate(0, 15%); }
+.search img { max-width: 40px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 input[id="sub"] { display: none; }
 input[id="sub"] + label { display: inline-block; width: 50px; height: 50px; position: absolute; right: 0; cursor: pointer; }
 input[type="text"] { outline-style: none; font-size: 20px; display: inline-block; width: 790px; height: 48px; position: absolute;; left: 50%; top: 50%;
-  transform: translate(-50%, -50%); border: 1px solid rgba(88, 255, 128, 1); border-radius: 4px; transition: all .4s; padding: 0 0 0 9px; }
+  transform: translate(-50%, -50%); border: 1px solid rgba(255, 105, 110, 1); border-radius: 4px; transition: all .4s; padding: 0 0 0 9px; }
 .searchGrid { width: 800px; height: 50px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
-.main { width: 1000px; height: 200px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
-.main h1 { color: rgb(88, 255, 128); font-size: 52px; position: absolute; left: 50%; top: 10px; transform: translate(-50%, -50%); transition: all .4s; }
+.main { width: 1000px; height: 200px; position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); }
+.main h1 { color: rgb(255, 105, 110); font-size: 52px; position: absolute; left: 50%; top: 10px; transform: translate(-50%, -50%); transition: all .4s; }
 .main .search { display: inline-block; width: 800px; height: 50px; transition: all .4s; position: absolute; left: 50%; top: 120px; transform: translate(-50%, -50%); }
+.menu input[type="submit"] { display: none; }
+.menu-item { display: inline-block; width: 110px; height: 110px; position: absolute; transform: translate(-50%, -50%); }
+.menu-item img { display: inline-block; max-width: 90px; position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%; transition: all .2s; }
+.menu-item img:hover { max-width: 110px; }
+.menu-item span { position: absolute; left: 50%; bottom: -20px; transform: translate(-50%, -50%); }
+.googleDocs { left: 20%; top: 150px; }
+.googleDrive { left: 50%; top: 150px; }
+.papago { left: 80%; top: 150px; }
+.gmail { left: 20%; top: 300px; }
+.youtube { left: 50%; top: 300px; }
+.news { left: 80%; top: 300px; }
 
 @media ( max-width: 500px ) {
 
-  .main { width: 300px; height: 100px; top: 300px; }
+  .main { width: 90vw; height: 100px; top: 40%; }
   .main h1 { font-size: 30px; top: 5px; }
-  .main .search { width: 300px; height: 33px; top: 72px; }
-  input[type="text"] { width: 245px; height: 33px; }
-  .search img { max-width: 30px; transform: translate(-50%, -50%); }
+  .main .search { width: 85vw; height: 35px; top: 72px; }
+  input[type="text"] { width: 85vw; height: 35px; }
+  .search img { max-width: 33px; }
+  .searchGrid { width: 85vw; height: 35px; }
+  input[id="sub"] + label { width: 33px; height: 33px; }
   .menu { width: 100vw; right: -101vw; }
   .touch { width: 30px; height: 50px; right: 2px; top: 33px; }
   .touch span { width: 30px; height: 2px; }
   .touch span:before { width: 30px; height: 2px; top: -8px; }
   .touch span:after { width: 30px; height: 2px; top: 8px; }
+  .menu-item img { max-width: 70px; }
+  .menu-item img:hover { max-width: 90px; }
 
 }

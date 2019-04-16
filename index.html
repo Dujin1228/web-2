@@ -3,7 +3,7 @@
 
   <head>
 
-    <title>Naver</title>
+    <title>Dujin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="style.css">
@@ -14,18 +14,26 @@
 
   <body>
 
-    <div class="main"><span class="opacity" id="opacity"><h1>NAVER</h1>
+    <div class="main"><span class="opacity" id="opacity"><h1>Search</h1>
       <div class="search">
-        <form action="https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8" autocomplete="off">
+        <form action="https://www.google.com/search" autocomplete="off">
           <div class="searchGrid">
-            <input type="text" name="query">
+            <input type="text" name="q">
             <input type="submit" id="sub">
-            <label for="sub"><img src="search.jpg"></label>
+            <label for="sub"><img src="icon-search.png"></label>
           </div>
         </form>
       </div>
     </span></div>
-    <div class="menu" id="menu"></div>
+    <div class="menu" id="menu">
+      <form action="https://docs.google.com/document/u/0/"><input type="submit" id="docs"><label for="docs" class="googleDocs menu-item"><img src="icon-googleDocs.png"><span>Document</span></label></form>
+      <form action="https://drive.google.com/drive/u/0/my-drive"><input type="submit" id="drive"><label for="drive" class="googleDrive menu-item"><img src="icon-googleDrive.png"><span>Drive</span></label></form>
+      <form action="https://papago.naver.com/"><input type="submit" id="papago"><label for="papago" class="papago menu-item"><img src="icon-papago.png"><span>Papago</span></label></form>
+      <form action="https://mail.google.com/"><input type="submit" id="gmail"><label for="gmail" class="gmail menu-item"><img src="icon-gmail.png"><span>Gmail</span></label></form>
+      <form action="https://www.youtube.com/"><input type="submit" id="youtube"><label for="youtube" class="youtube menu-item"><img src="icon-youtube.png"><span>Youtube</span></label></form>
+      <form action="https://news.google.com/?hl=ko&gl=KR&ceid=KR:ko"><input type="submit" id="news"><label for="news" class="news menu-item"><img src="icon-news.png"><span>News</span></label></form>
+
+    </div>
     <a href="#a" class="touch" id="touch-button"><span></span></a>
 
   </body>
