@@ -1,10 +1,10 @@
 body { background: white; width: 100vw; height: 100vh; margin: 0; font-family: sans-serif; overflow: hidden; }
 .touch { display: inline-block; position: absolute; width: 40px; height: 40px; right: 5px; top: 40px; transform: translate(-50%, -50%); text-decoration: none; }
 @media (max-width: 500px) { .touch { width: 30px; height: 30px; right: 2px; top: 33px; } }
-.touch span { display: inline-block; position: absolute; top: 50%; transform: translate(0, -50%); width: 100%; height: 10%; background: rgba(88, 255, 128, 1); color: transparent; }
-.touch span:before, .touch span:after {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(88, 255, 128, 1); }
-.touch span:before { top: -320%; }
-.touch span:after { top: 320%; }
+.touch span { display: inline-block; position: absolute; top: 50%; transform: translate(0, -50%); width: 40px; height: 2px; background: rgba(88, 255, 128, 1); color: transparent; }
+.touch span:before, .touch span:after {content: ""; position: absolute; left: 0; top: 0; width: 40px; height: 2px; background: rgba(88, 255, 128, 1); }
+.touch span:before { top: -12px; }
+.touch span:after { top: 12px; }
 .touch.on span { animation-name: touch-on; animation-duration: 0.5s; animation-fill-mode: forwards; }
 .touch.on span:before { animation-name: touch-on-before; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out; }
 .touch.on span:after { animation: touch-on-after; animation-duration: 0.5s; animation-fill-mode: forwards; }
@@ -15,8 +15,8 @@ body { background: white; width: 100vw; height: 100vh; margin: 0; font-family: s
 @keyframes touch-on-after { to { top: 0; transform: rotate(-45deg); background: rgba(128, 128, 128, 1); } }
 @keyframes touch-on-before { to { top: 0; transform: rotate(45deg); background: rgba(128, 128, 128, 1); } }
 @keyframes touch-off { to { background: rgba(88, 255, 128, 1); } }
-@keyframes touch-off-after { to { top: 320%; transform: rotate(0); } }
-@keyframes touch-off-before { to { top: -320%; transform: rotate(0); } }
+@keyframes touch-off-after { to { top: 12px; transform: rotate(0); } }
+@keyframes touch-off-before { to { top: -12px; transform: rotate(0); } }
 .opacity.menu-on h1, .opacity.menu-on .search { opacity: 0.35; }
 .menu { display: inline-block; background: white; position: absolute; right: -702px; top: 0; width: 700px; height: 100vh; transition: all .5s; border-left: 2px solid gray; }
 .menu.on { right: 0; }
@@ -32,11 +32,15 @@ input[type="text"] { outline-style: none; font-size: 20px; display: inline-block
 
 @media ( max-width: 500px ) {
 
-  .main { width: 300px; height: 100px; top: 35%; }
+  .main { width: 300px; height: 100px; top: 300px; }
   .main h1 { font-size: 30px; top: 5px; }
   .main .search { width: 300px; height: 33px; top: 72px; }
   input[type="text"] { width: 245px; height: 33px; }
   .search img { max-width: 30px; transform: translate(-50%, -50%); }
   .menu { width: 100vw; right: -101vw; }
+  .touch { width: 30px; height: 50px; right: 2px; top: 33px; }
+  .touch span { width: 30px; height: 2px; }
+  .touch span:before { width: 30px; height: 2px; top: -8px; }
+  .touch span:after { width: 30px; height: 2px; top: 8px; }
 
 }
