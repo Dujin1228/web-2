@@ -17,8 +17,6 @@ body { background: white; width: 100vw; height: 100vh; margin: 0; font-family: s
 @keyframes touch-off { to { background: rgba(88, 255, 128, 1); } }
 @keyframes touch-off-after { to { top: 320%; transform: rotate(0); } }
 @keyframes touch-off-before { to { top: -320%; transform: rotate(0); } }
-.main .search { display: inline-block; width: 800px; height: 50px; transition: all .4s; position: absolute; left: 50%; top: 35%; transform: translate(-50%, -50%); }
-.main h1 { color: rgb(88, 255, 128); font-size: 52px; position: absolute; left: 50%; top: 20%; transform: translate(-50%, -50%); transition: all .4s; }
 .opacity.menu-on h1, .opacity.menu-on .search { opacity: 0.35; }
 .menu { display: inline-block; background: white; position: absolute; right: -702px; top: 0; width: 700px; height: 100vh; transition: all .5s; border-left: 2px solid gray; }
 .menu.on { right: 0; }
@@ -28,11 +26,15 @@ input[id="sub"] + label { display: inline-block; width: 50px; height: 50px; posi
 input[type="text"] { outline-style: none; font-size: 20px; display: inline-block; width: 790px; height: 48px; position: absolute;; left: 50%; top: 50%;
   transform: translate(-50%, -50%); border: 1px solid rgba(88, 255, 128, 1); border-radius: 4px; transition: all .4s; padding: 0 0 0 9px; }
 .searchGrid { width: 800px; height: 50px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.main { width: 1000px; height: 200px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.main h1 { color: rgb(88, 255, 128); font-size: 52px; position: absolute; left: 50%; top: 10px; transform: translate(-50%, -50%); transition: all .4s; }
+.main .search { display: inline-block; width: 800px; height: 50px; transition: all .4s; position: absolute; left: 50%; top: 120px; transform: translate(-50%, -50%); }
 
 @media ( max-width: 500px ) {
 
-  .main h1 { font-size: 30px; top: 20%; }
-  .main .search { width: 300px; height: 33px; top: 30%; }
+  .main { width: 300px; height: 100px; top: 35%; }
+  .main h1 { font-size: 30px; top: 5px; }
+  .main .search { width: 300px; height: 33px; top: 72px; }
   input[type="text"] { width: 245px; height: 33px; }
   .search img { max-width: 30px; transform: translate(-50%, -50%); }
   .menu { width: 100vw; right: -101vw; }
