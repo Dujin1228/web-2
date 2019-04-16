@@ -5,7 +5,7 @@
 
     <title>Naver</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="script.js"></script>
@@ -17,9 +17,11 @@
     <div class="main"><span class="opacity" id="opacity"><h1>NAVER</h1>
       <div class="search">
         <form action="https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8" autocomplete="off">
-          <input type="text" name="query">
-          <input type="submit" id="sub">
-          <label for="sub"><img src="search.jpg"></label>
+          <div class="searchGrid">
+            <input type="text" name="query">
+            <input type="submit" id="sub">
+            <label for="sub"><img src="search.jpg"></label>
+          </div>
         </form>
       </div>
     </span></div>

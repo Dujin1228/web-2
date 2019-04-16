@@ -25,11 +25,16 @@ body { background: white; width: 100vw; height: 100vh; margin: 0; font-family: s
 .search img { max-width: 40px; color: white; transform: translate(0, 15%); }
 input[id="sub"] { display: none; }
 input[id="sub"] + label { display: inline-block; width: 50px; height: 50px; position: absolute; right: 0; cursor: pointer; }
-input[type="text"] { outline-style: none; font-size: 20px; display: inline-block; width: 800px; height: 50px; position: absolute;; left: 50%; top: 50%;
-  transform: translate(-50%, -50%); border: 1px solid rgba(88, 255, 128, 1); border-radius: 4px; transition: all .4s; padding-left: 8px; }
+input[type="text"] { outline-style: none; font-size: 20px; display: inline-block; width: 790px; height: 48px; position: absolute;; left: 50%; top: 50%;
+  transform: translate(-50%, -50%); border: 1px solid rgba(88, 255, 128, 1); border-radius: 4px; transition: all .4s; padding: 0 0 0 9px; }
+.searchGrid { width: 800px; height: 50px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+
 @media ( max-width: 500px ) {
 
   .main h1 { font-size: 30px; top: 20%; }
   .main .search { width: 300px; height: 33px; top: 30%; }
+  input[type="text"] { width: 245px; height: 33px; }
+  .search img { max-width: 30px; transform: translate(-50%, -50%); }
+  .menu { width: 100vw; right: -101vw; }
 
 }
